@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Image;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -15,7 +16,7 @@ class Post extends Model
     protected $post_image_path = 'img/posts/';
 
     public function infoStatus(){
-        return $this->likes()->count() . ' ' .str_plural('Like', $this->likes()->count()) . ' | '. $this->comments()->count() . ' ' .str_plural('Comment', $this->comments()->count());
+        return $this->likes()->count() . ' ' .Str::plural('Like', $this->likes()->count()) . ' | '. $this->comments()->count() . ' ' .Str::plural('Comment', $this->comments()->count());
     }
 
     public function imagePath(Image $img){

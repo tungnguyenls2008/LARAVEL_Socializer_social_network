@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Response;
 use App\User;
@@ -15,7 +14,7 @@ class LoginController extends Controller
     public function login(Request $request){
 
         $rules = array('email' => 'required|email|max:50', 'password' => 'required|min:3|max:20');
-		$validator = Validator::make(Input::all(), $rules);
+		$validator = Validator::make($request->all(), $rules);
 
 		// Validate the input and return correct response
 		if ($validator->fails()){
@@ -63,7 +62,7 @@ class LoginController extends Controller
 		        'errors' => [
 		        	'name' => 'Must have First and Last Name.'
 		        ]
-		    ), 400); // 400 being the HTTP code for an invalid request. 
+		    ), 400); // 400 being the HTTP code for an invalid request.
 		}
 
 

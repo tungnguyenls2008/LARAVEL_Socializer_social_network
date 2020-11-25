@@ -11,7 +11,9 @@ class Image extends Model
 		'filename'
 	];
 
-	public function imageable(){
+
+
+    public function imageable(){
 		return $this->morphTo();
 	}
 }

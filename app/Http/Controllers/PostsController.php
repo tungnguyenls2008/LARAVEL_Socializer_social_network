@@ -31,7 +31,7 @@ class PostsController extends Controller
         $tags = array();
 
         for ($i = 0; $i < count($matches[1]); $i++){
-            
+
             $tag = $matches[1][$i];
 
             array_push($tags, $tag);
@@ -49,11 +49,11 @@ class PostsController extends Controller
             'image' => 'image'
         );
 
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make($request->all(), $rules);
 
         // Validate the input and return correct response
         if ($validator->fails()){
-            return Response::json(array(
+            return Response()->json(array(
                 'success' => false,
                 'errors' => $validator->getMessageBag()->toArray()
             ), 400); // 400 being the HTTP code for an invalid request.
@@ -79,10 +79,10 @@ class PostsController extends Controller
                 $image->move('img/posts/', $filename);
 
                 $post->images()->create(['filename' => $filename]);
-            }            
+            }
         }
 
-        return Response::json(array(
+        return Response()->json(array(
                 'success' => true,
         )); // 400 being the HTTP code for an invalid request.
 
@@ -95,7 +95,7 @@ class PostsController extends Controller
 
     public function destroy($id)
     {
-        
+
         $post = Post::findOrFail($id);
 
         if ($post->user_id == Auth::user()->id){

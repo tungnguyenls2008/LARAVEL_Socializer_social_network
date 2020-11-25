@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
-use Response;
-
-use Image;
+use http\Client\Response;
 use App\User;
-use Auth;
+
 
 class ProfileController extends Controller
 {
@@ -34,12 +33,12 @@ class ProfileController extends Controller
 	}
 
 	public function changeCover(Request $request){
-		
+
 		$rules = array(
             'image' => 'required|image'
         );
 
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make($request->all(), $rules);
 
         // Validate the input and return correct response
         if ($validator->fails()){
@@ -55,16 +54,16 @@ class ProfileController extends Controller
 			$filename = time() . '.' . $image->getClientOriginalExtension();
 			$image->move(Auth::user()->getCoverPath(), $filename);
 
-			$img = Image::make(asset(Auth::user()->getCoverPath() . $filename));
-			$img->fit(1300,400);
-			$img->save(Auth::user()->getCoverPath() . $filename);
+			$img = Image::make([asset(Auth::user()->getCoverPath() . $filename)]);
+			//$img->fit(1300,400);
+			$img->save([Auth::user()->getCoverPath() . $filename]);
 
 			Auth::user()->update([
 				'cover' => $filename
 			]);
         }
 
-        return Response::json(array(
+        return Response()->json(array(
         	'success' => true
         ));
 
@@ -75,7 +74,7 @@ class ProfileController extends Controller
             'image' => 'required|image'
         );
 
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make($request->all(), $rules);
 
         // Validate the input and return correct response
         if ($validator->fails()){
@@ -91,16 +90,16 @@ class ProfileController extends Controller
 			$filename = time() . '.' . $image->getClientOriginalExtension();
 			$image->move(Auth::user()->getAvatarPath(), $filename);
 
-			$img = Image::make(asset(Auth::user()->getAvatarPath() . $filename));
-			$img->fit(500,500);
-			$img->save(Auth::user()->getAvatarPath() . $filename);
+			$img = Image::make([asset(Auth::user()->getAvatarPath() . $filename)]);
+			//$img->fit(500,500);
+			$img->save([Auth::user()->getAvatarPath() . $filename]);
 
 			Auth::user()->update([
 				'avatar' => $filename
 			]);
         }
 
-        return Response::json(array(
+        return Response()->json(array(
         	'success' => true
         ));
 	}

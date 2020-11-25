@@ -8,7 +8,6 @@ use Carbon\Carbon;
 use DB;
 
 use Auth;
-use App\User;
 use App\Post;
 use App\Image;
 use App\Comment;

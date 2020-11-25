@@ -5,10 +5,11 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.0",
         "intervention/image": "^2.3",
-        "laravel/framework": "5.3.*",
-        "laravelcollective/html": "^5.3.0"
+        "laravel/framework": "7.*",
+        "laravelcollective/html": "^6.0.x-dev",
+      "ext-http": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -38,12 +39,10 @@
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ]
     },
     "config": {

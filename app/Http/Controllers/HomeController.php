@@ -9,15 +9,11 @@ use Carbon;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
 
     public function __construct(){
 
-        if (!Auth::check()){            
+        if (!Auth::check()){
             return view('welcome');
         }
     }
@@ -39,13 +35,13 @@ class HomeController extends Controller
     public function photos($id){
 
         $user = User::findOrFail($id);
-       
+
         return view('app.photos')->with('user', $user);
     }
 
     public function friends($id){
         $user = User::findOrFail($id);
-       
+
         return view('app.friends')->with('user', $user);
     }
 

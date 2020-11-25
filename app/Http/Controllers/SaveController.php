@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
 use App\Post;
 use App\Save;
 use Auth;
@@ -24,7 +24,7 @@ class SaveController extends Controller
     }
 
     public function handleSave($postId){
-		
+
 		$existing_save = Save::whereUserId(Auth::user()->id)->wherePostId($postId)->first();
 
 		if (is_null($existing_save)) {
