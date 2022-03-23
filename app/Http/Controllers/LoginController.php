@@ -43,7 +43,7 @@ class LoginController extends Controller
 
     public function register(Request $request){
     	$rules = array('name' => 'required|min:7|max:30', 'email' => 'required|email|max:50|unique:users', 'password' => 'required|min:3|max:20');
-		$validator = Validator::make(Request::all(), $rules);
+		$validator = Validator::make($request->all(), $rules);
 
 		$parts = explode(" ", $request->input('name'));
 		$lastname = array_pop($parts);
