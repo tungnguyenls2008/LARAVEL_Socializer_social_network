@@ -135,15 +135,15 @@ class User extends Authenticatable
         $activity = "";
 
         foreach ($posts as $post){
-            $activity .= '<a href="'. route('profile.view', ['id' => $post->user->id]) .'">'.$post->user->getFullName() . '</a> has made a new post ' . $post->created_at->diffForHumans() . '.<br>';
+            $activity .= '<a href="'. route('profile.view', ['id' => $post->user->id]) .'">'.$post->user->getFullName() . '</a> đã tạo bài viết mới ' . $post->created_at->diffForHumans() . '.<br>';
         }
 
         foreach ($comments as $comment){
-            $activity .= '<a href="'. route('profile.view', ['id' => $comment->user_id]) .'">'.$comment->user->getFullName() . "</a> has commented " . $comment->created_at->diffForHumans() . " on ". '<a href="'. route('profile.view', ['id' => $comment->post->user_id]) .'">'.$comment->post->user->getFullName() ."</a>'s post.<br>";
+            $activity .= '<a href="'. route('profile.view', ['id' => $comment->user_id]) .'">'.$comment->user->getFullName() . "</a> đã bình luận lúc " . $comment->created_at->diffForHumans() . " vào bài viết của ". '<a href="'. route('profile.view', ['id' => $comment->post->user_id]) .'">'.$comment->post->user->getFullName() ."</a>.<br>";
         }
 
         foreach ($likes as $like){
-            $activity .= '<a href="'. route('profile.view', ['id' => $like->user_id]) .'">'.$like->user->getFullName() . '</a> has liked <a href="'. route('profile.view', ['id' => $like->likeable->user_id]).'">'. $like->likeable->user->getFullName() ."'s</a> post.<br>";
+            $activity .= '<a href="'. route('profile.view', ['id' => $like->user_id]) .'">'.$like->user->getFullName() . '</a> đã thích bài viết của <a href="'. route('profile.view', ['id' => $like->likeable->user_id]).'">'. $like->likeable->user->getFullName() ."</a>.<br>";
         }
 
 
