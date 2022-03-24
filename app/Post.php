@@ -16,7 +16,7 @@ class Post extends Model
     protected $post_image_path = 'img/posts/';
 
     public function infoStatus(){
-        return $this->likes()->count() . ' ' .Str::plural('Lượt thích', $this->likes()->count()) . ' | '. $this->comments()->count() . ' ' .Str::plural('Bình luận', $this->comments()->count());
+        return $this->likes()->count() . ' Lượt thích | '. $this->comments()->count() . ' Bình luận';
     }
 
     public function imagePath(Image $img){
