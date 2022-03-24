@@ -44,13 +44,13 @@
 			<div class="col-sm-8 col-xs-12">
 				<ul class="chat">
 					<div class="chatText">
-						<p class="text-center">Choose a friend to view the conversation</p>
+						<p class="text-center">Chọn một người bạn để xem nhật ký cuộc hội thoại</p>
 					</div>
 					<div class="chatTextbox" style="display: none;">
 						<div class="input-group" style="margin-right: 8px">
-							<input type="text" name="" id="MsgBody" class="form-control" required="required" placeholder="Write your message">
+							<input type="text" name="" id="MsgBody" class="form-control" required="required" placeholder="Viết tin nhắn của bạn">
 							<span class="input-group-btn">
-								<button class="btn btn-signature" id="MsgSend"><i class="fa fa-location-arrow" aria-hidden="true"></i> Send</button>
+								<button class="btn btn-signature" id="MsgSend"><i class="fa fa-location-arrow" aria-hidden="true"></i> Gửi</button>
 							</span>
 						</div>
 					</div>
@@ -58,8 +58,8 @@
 
 			</div>
 		@else
-			<p>You don't have any friends to talk to.</p>
-			<p>But stay tight! <a href="mailto:rgmachado92@hotmail.com">rgmachado92@hotmail.com</a> Drop me an email! Anytime you want.</p>
+			<p>Bạn chưa có bạn bè nào để nhắn tin :(</p>
+			<p>Nhưng đừng lo! <a href="mailto:tungnguyenls2008@gmail.com">tungnguyenls2008@gmail.com</a> Hãy gửi mail cho tôi bất cứ khi nào.</p>
 		@endif
 			
 		</div>

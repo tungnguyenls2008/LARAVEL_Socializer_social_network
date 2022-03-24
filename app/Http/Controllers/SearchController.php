@@ -13,7 +13,7 @@ class SearchController extends Controller
     	$q = Request::input('q');
 
     	if (strlen($q) < 3){
-    		return 'Search must have at least 3 chars.';
+    		return 'Chuỗi tìm kiếm phải có ít nhất 3 kí tự.';
     	}
     	
     	$users = User::where(DB::raw("CONCAT(`first_name`, ' ', `last_name`)"), 'LIKE', '%'.$q.'%')->whereNotIn('id', [Auth::user()->id])->get();

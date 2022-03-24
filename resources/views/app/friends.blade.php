@@ -20,7 +20,7 @@
 					
 				@endforeach
 			@else
-				<p class="text-center">{{ $user->getFullName() }} has no friends :(</p>
+				<p class="text-center">{{ $user->getFullName() }} chưa có bạn bè :(</p>
 			@endif
 			</div>
 		</div>

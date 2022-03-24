@@ -14,8 +14,8 @@
 		</a>
 		<i> <small>- {{ $comment->created_at->diffForHumans() }}
 		@if ($comment->canDelete($post->id))
-		- <button type="button" data-toggle="modal" data-target="#confirmDelete" data-title="Delete Comment" data-message="Are you sure you want to delete this comment?">
-				<i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+		- <button type="button" data-toggle="modal" data-target="#confirmDelete" data-title="Xóa bình luận" data-message="Bạn chắc chắn muốn xóa bình luận này chứ?">
+				<i class="fa fa-trash-o" aria-hidden="true"></i> Xóa
 			</button>
 			{!! Form::close() !!}
 		@endif

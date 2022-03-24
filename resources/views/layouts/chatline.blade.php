@@ -21,11 +21,11 @@
 		</li>
 	@endforeach
 @else
-	<p>Start a conversation with {{ $friend->getFullName() }}</p>
+	<p>Bắt đầu cuộc trò chuyện với {{ $friend->getFullName() }}</p>
 	@if ($friend->id == 1)
-		<p>I've heard he's a swell guy! ;)</p>
+		<p>Có vẻ đó là một người bạn đáng mến! ;)</p>
 	@endif
 	@if ($friend->bot == 1)
-		<p>Keep in mind that he's a bot, and he's quite shy. But loves sports, party and being a computer all day... :|</p>
+		<p>Lưu ý rằng đây chỉ là một AI... :|</p>
 	@endif
 @endif

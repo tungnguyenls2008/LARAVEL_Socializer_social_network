@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
+    'password' => 'Mật khẩu phải ít nhất 6 kí tự và trùng khới với xác nhận.',
+    'reset' => 'Mật khẩu của bạn đã được đặt lại!',
+    'sent' => 'Mật khẩu mới đã được gửi đến email của bạn!',
     'token' => 'This password reset token is invalid.',
     'user' => "We can't find a user with that e-mail address.",
 

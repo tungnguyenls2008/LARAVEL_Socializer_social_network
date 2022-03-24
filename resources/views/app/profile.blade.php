@@ -14,7 +14,7 @@
 					@endforeach
 					</div>
 				@else
-					<p>{{ $user->getFullName() }} has no posts.</p>
+					<p>{{ $user->getFullName() }} chưa có bài viết nào.</p>
 				@endif
 				</div>
 				<div class="col-md-4 sidebar" style="padding-left:20px; padding-right: 0;">
@@ -25,7 +25,7 @@
 					@endif
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Friends
+							Bạn bè
 						</div>
 						<div class="panel-body">
 							@foreach ($user->friends() as $friend)

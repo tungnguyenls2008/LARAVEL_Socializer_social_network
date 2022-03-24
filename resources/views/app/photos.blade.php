@@ -29,7 +29,7 @@
 					@endforeach
 				@endforeach
 			@else
-				<p class="text-center">{{ $user->getFullName() }} has no photos.</p>
+				<p class="text-center">{{ $user->getFullName() }} chưa có ảnh.</p>
 			@endif
 
 			</div>

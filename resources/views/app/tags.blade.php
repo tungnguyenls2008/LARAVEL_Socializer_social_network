@@ -23,7 +23,7 @@
 			@endforeach
 			</div>
 		@else
-			<p class="text-center">There are no Posts.</p>
+			<p class="text-center">Chưa có bài viết nào.</p>
 		@endif
 		</div>	
 	</div>

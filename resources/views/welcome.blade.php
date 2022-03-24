@@ -315,14 +315,14 @@
                             <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
                                 <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
                             </svg>
-                            {!! Form::password('password', ['class' => 'login__input pass', 'placeholder' => 'Password']) !!}
+                            {!! Form::password('password', ['class' => 'login__input pass', 'placeholder' => 'Mật khẩu']) !!}
                         </div>
                         <span id="LoginFormPasswordError" style="display: none;" class="help-block" style="font-size: 12px"></span>
                         <div class="checkbox pull-left" style="font-size: 12px; color:rgba(255,255,255,0.5)">
-                          <label><input style="background-color: transparent;" type="checkbox" name="remember" value="remember">Remember me?</label>
+                          <label><input style="background-color: transparent;" type="checkbox" name="remember" value="remember">Ghi nhớ đăng nhập?</label>
                         </div>
-                        <button type="button" class="login__submit login_submit">Sign in</button>
-                        <p class="login__signup">Don't have an account? &nbsp;<a>Sign up</a></p>
+                        <button type="button" class="login__submit login_submit">Đăng nhập</button>
+                        <p class="login__signup">Chưa có tài khoản? &nbsp;<a>Đăng ký</a></p>
                     {!! Form::close() !!}
                     </div>
                     <div class="login__form register_form" style="display: none; top:35%">
@@ -331,7 +331,7 @@
                             <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
                                 <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
                             </svg>
-                            {!! Form::text('name', null, ['class' => 'login__input', 'placeholder' => 'Name']) !!}
+                            {!! Form::text('name', null, ['class' => 'login__input', 'placeholder' => 'Tên']) !!}
                         </div>
                         <span id="RegisterFormNameError" style="display: none;" class="help-block" style="font-size: 12px"></span>
                         <div class="login__row" id="RegisterFormEmailInput">
@@ -345,11 +345,11 @@
                             <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
                                 <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
                             </svg>
-                            {!! Form::password('password', ['class' => 'login__input pass', 'placeholder' => 'Password']) !!}
+                            {!! Form::password('password', ['class' => 'login__input pass', 'placeholder' => 'Mật khẩu']) !!}
                         </div>
                         <span id="RegisterFormPasswordError" style="display: none;" class="help-block" style="font-size: 12px"></span>
-                        <button type="button" class="login__submit register_submit">Sign up</button>
-                        <p class="login__signup">Already have an account? &nbsp;<a>Sign in</a></p>
+                        <button type="button" class="login__submit register_submit">Đăng ký</button>
+                        <p class="login__signup">Đã có tài khoản? &nbsp;<a>Đăng nhập</a></p>
                     {!! Form::close() !!}
                     </div>
                 </div>

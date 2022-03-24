@@ -28,7 +28,7 @@
 			<div class="container" style="margin-top: 10px">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
+						<span class="sr-only">Tắt/Mở điều hướng</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -37,9 +37,9 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navigation">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="{{ route('profile.view', ['id' => Auth::user()->id]) }}">Profile</a></li>
-						<li><a href="{{ route('index') }}">Home</a></li>
-						<li><a href="{{ url('/logout') }}">Logout</a></li>
+						<li><a href="{{ route('profile.view', ['id' => Auth::user()->id]) }}">Hồ sơ</a></li>
+						<li><a href="{{ route('index') }}">Trang chủ</a></li>
+						<li><a href="{{ url('/logout') }}">Đăng xuất</a></li>
 					</ul>
 				</div>
 			</div>

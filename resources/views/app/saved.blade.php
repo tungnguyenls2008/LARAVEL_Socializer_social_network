@@ -24,7 +24,7 @@
 				@endforeach
 				</div>
 			@else
-				<p class="text-center">You have no saved posts!</p>
+				<p class="text-center">Bạn chưa lưu bài viết nào!</p>
 			@endif
 
 		</div>
